@@ -1,23 +1,27 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 /* common styles */
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
-/* first part */
+p{
+    color: #6C6C6C;
+    font-size: 16px;
+}
+/* 1st part */
 
-.first-part{
+.top-section{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: rgb(0 63 162);
     height: 677px;
 }
-.left-side-content{
-    width: 40%;
-}
+
 .left-side-content h2{
     font-size: 64px;
     color: white;
@@ -25,17 +29,24 @@ body{
 .left-side-content h2:hover{
     color: tomato;
 }
+.left-side-content .btn{
+    font-size: 16px;
+    padding: 10px 24px;
+    color: white;
+    background-color: #E02C6D;
+}
 .right-side-image{
     width: 40%;
 }
 .right-side-image img{
-    width: 526px;
+    width: 100%;
 }
 /* 2nd part */
 .players-section{
     margin-top: 83px;
     display: flex;
-    justify-content: center
+    flex-direction: column;
+    align-items: center;
 }
 .players{
     display: grid;
@@ -47,14 +58,67 @@ body{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 .player img{
-    width: 300px;
+    width: 100%;
 }
 /* 3rd part */
 .webpage-footer{
-    margin-top: 158px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.webpage-banner img{
-    height: 110px;   
+footer img{ 
+    width: 450px;  
+}
+.fab{
+    font-size: 20px;
+    background-color: rgb(212, 205, 205);
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 20px;
+}
+.copyright-detail{
+    font-size: 18px;
+    margin-top: 20px;
+}
+/* extra part */
+.sponsors h2{
+    text-align: center;
+}
+.all-sponsors{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sponsor-list{
+    display:grid;
+    grid-template-columns: repeat(3, 330px);
+    gap: 27px 30px;
+}
+.sponsor{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    
+}
+.sponsor img{
+    width: 100%;
 }
 
-
+/* ......Media Queries..... */
+   /* ..Mobile Device.. */
+@media screen and (max-width:480px){
+    .top-section{
+        flex-direction:column;
+    }
+    .players, .sponsor-list{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .left-side-content h2{
+        font-size: 30px;
+    }
+    .right-side-image {
+        width: 75%;
+    }
+    footer img{
+        width: 220px;
+    }
+}
