@@ -102,15 +102,36 @@ footer img{
 .sponsor img{
     width: 100%;
 }
+/* gallery style */
+.gallery{
+    width: 1050px;
+    margin: auto;
+}
+.gallery h1{
+    text-transform: capitalize;
+    font-size:30px ;
+    text-align: center;
 
+}
+.gallery-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+}
 /* ......Media Queries..... */
    /* ..Mobile Device.. */
 @media screen and (max-width:480px){
     .top-section{
         flex-direction:column;
     }
-    .players, .sponsor-list{
+    .players, .sponsor-list,.gallery-content{
         grid-template-columns: repeat(1,1fr);
+    }
+    .gallery-content{
+        grid-row-gap: 5px;
     }
     .left-side-content h2{
         font-size: 30px;
@@ -120,5 +141,8 @@ footer img{
     }
     footer img{
         width: 220px;
+    }
+    .gallery{
+        width: 100%;
     }
 }
